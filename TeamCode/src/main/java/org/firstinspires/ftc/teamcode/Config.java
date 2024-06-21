@@ -22,6 +22,8 @@ public class Config {
     public static final String LEFT_FRONT_DRIVE = "leftFront";
     public static final String LEFT_BACK_DRIVE = "leftBack";
 
+    public static final double ROBOT_WIDTH = 18;
+
     // Current game runtime
     private ElapsedTime runtime = new ElapsedTime();
 

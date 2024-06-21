@@ -2,6 +2,8 @@ package org.firstinspires.ftc.teamcode;
 
 import org.firstinspires.ftc.teamcode.subsystem.DriveTrain;
 import org.firstinspires.ftc.teamcode.subsystem.SubSystem;
+import org.firstinspires.ftc.teamcode.subsystem.sensor.DistanceSensors;
+import org.firstinspires.ftc.teamcode.subsystem.sensor.Odometry;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -17,6 +19,8 @@ public class ManualRobot {
         config = cfg;
         // Register the subsystem. System will not work if it's not registered
         subSystems.add(new DriveTrain(config, isOneController));
+        subSystems.add(new Odometry(config, isOneController));
+        subSystems.add(new DistanceSensors(config, isOneController));
     }
 
     // Initialize each subsystem
