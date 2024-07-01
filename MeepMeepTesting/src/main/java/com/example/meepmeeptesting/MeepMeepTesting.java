@@ -16,16 +16,9 @@ public class MeepMeepTesting {
                 .build();
 
         myBot.runAction(myBot.getDrive().actionBuilder(new Pose2d(12, 60, Math.toRadians(270)))
-                .lineToYSplineHeading(33, Math.toRadians(0))
+                .lineToY(34.5)
                 .waitSeconds(2)
-                .setTangent(Math.toRadians(90))
-                .lineToY(48)
-                .setTangent(Math.toRadians(0))
-                .lineToX(32)
-                .strafeTo(new Vector2d(44.5, 30))
-                .turn(Math.toRadians(180))
-                .lineToX(47.5)
-                .waitSeconds(3)
+                .strafeToSplineHeading(new Vector2d(47,34.5), Math.toRadians(0))
                 .build());
 
 
