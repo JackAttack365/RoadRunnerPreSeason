@@ -10,7 +10,7 @@ import com.noahbres.meepmeep.roadrunner.entity.RoadRunnerBotEntity;
 
 public class MeepMeepTesting {
     public static void main(String[] args) {
-        MeepMeep meepMeep = new MeepMeep(800);
+        MeepMeep meepMeep = new MeepMeep(900);
         int blue = 0;
 
         RoadRunnerBotEntity blueBot = new DefaultBotBuilder(meepMeep)
@@ -63,14 +63,20 @@ public class MeepMeepTesting {
                 .waitSeconds(1)
                 .strafeTo(new Vector2d(47,34.5*blue))
                 .waitSeconds(1)
-                .strafeTo(new Vector2d(-34,34.5*blue))
+                .strafeTo(new Vector2d(-17,34*blue))
                 .splineTo(new Vector2d(-52,24*blue), Math.toRadians(180))
                 .waitSeconds(1)
-                .splineTo(new Vector2d(-34,34.5*blue), Math.toRadians(0))
+                .splineTo(new Vector2d(-17,34*blue), Math.toRadians(0))
                 .strafeTo(new Vector2d(47,34.5*blue))
                 .waitSeconds(1)
-                .strafeTo(new Vector2d(47,59*blue))
-                .strafeTo(new Vector2d(59,59*blue))
+                .strafeTo(new Vector2d(-17,34*blue))
+                .splineTo(new Vector2d(-52,24*blue), Math.toRadians(180))
+                .waitSeconds(1)
+                .splineTo(new Vector2d(-17,34*blue), Math.toRadians(0))
+                .strafeTo(new Vector2d(47,34.5*blue))
+                .waitSeconds(1)
+                //.strafeTo(new Vector2d(47,12*blue))
+                //.strafeTo(new Vector2d(59,59*blue))
                 .build());
 
 
